@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/nikhilmakhijani/pytest/compare/v0.1.0...v1.0.0) (2023-06-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* testing version
+
+### Features
+
+* test breaking change ([70a5534](https://github.com/nikhilmakhijani/pytest/commit/70a5534c034101435616d7fb790335ab36cf61a3))
+
 ## 0.1.0 (2023-06-24)
 
 
