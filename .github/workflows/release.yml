@@ -1,10 +1,10 @@
 # .github/workflows/release-please.yml
-name: release-please
+name: Release-please
 on:
   push:
     branches:
       - main
-      
+
 permissions:
   contents: write
   pull-requests: write
