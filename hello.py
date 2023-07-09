@@ -4,3 +4,6 @@ def more_hello():
 
 def more_goodbye():
     return "bye"
+
+def more_seeyou():
+    return "see you"
