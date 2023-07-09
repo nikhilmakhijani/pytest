@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/nikhilmakhijani/pytest/compare/v1.2.0...v1.2.1) (2023-07-09)
+
+
+### Bug Fixes
+
+* name of the release workflow ([ba3d8ad](https://github.com/nikhilmakhijani/pytest/commit/ba3d8ad7026b8ce48208c4e20e201be07d2a55b3))
+
 ## [1.2.0](https://github.com/nikhilmakhijani/pytest/compare/v1.1.0...v1.2.0) (2023-07-09)
 
 
