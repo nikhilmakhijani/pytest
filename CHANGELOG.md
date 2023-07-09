@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/nikhilmakhijani/pytest/compare/v1.0.0...v1.1.0) (2023-07-09)
+
+
+### Features
+
+* add shared workflow ([3cdea12](https://github.com/nikhilmakhijani/pytest/commit/3cdea1230c97f1098fad277bca19fe02bc726e2e))
+
 ## [1.0.0](https://github.com/nikhilmakhijani/pytest/compare/v0.1.0...v1.0.0) (2023-06-24)
 
 
