@@ -11,9 +11,4 @@ permissions:
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: google-github-actions/release-please-action@v3
-        with:
-          release-type: python # Multiple release types are supported
-          default-branch: main
+    uses: nikhilmakhijani/sharedworkflow/.github/workflows/release-tag.yml@main
