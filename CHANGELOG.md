@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/nikhilmakhijani/pytest/compare/v1.1.0...v1.2.0) (2023-07-09)
+
+
+### Features
+
+* add see you function ([e6efdbc](https://github.com/nikhilmakhijani/pytest/commit/e6efdbc9fa30e82e55731d805cb263a29ce4593c))
+
 ## [1.1.0](https://github.com/nikhilmakhijani/pytest/compare/v1.0.0...v1.1.0) (2023-07-09)
 
 
