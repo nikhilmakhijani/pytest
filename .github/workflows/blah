@@ -1,0 +1,42 @@
+name: Remove Cloud Run Tags on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  remove-cloud-run-tags:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'main')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          version: 'latest'
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Authenticate with GCP
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+        run: |
+          echo "${{ secrets.GCP_CREDENTIALS }}" > $HOME/gcloud-key.json
+          gcloud auth activate-service-account --key-file=$HOME/gcloud-key.json
+
+      - name: Extract service name
+        id: extract_service
+        run: |
+          # Extract the service name from the file path (e.g., app/mailer → mailer)
+          echo "service_name=$(basename app/mailer)" >> $GITHUB_ENV
+
+      - name: Remove Cloud Run Tag
+        env:
+          SERVICE_NAME: ${{ env.service_name }}
+          BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
+        run: |
+          echo "Removing tag for branch: $BRANCH_NAME from service: $SERVICE_NAME"
+          gcloud run services update $SERVICE_NAME \
+            --remove-tags=$BRANCH_NAME \
+            --region=YOUR_REGION
